@@ -19,6 +19,35 @@
   --body-weight2: 700;
 }
 
+@keyframes moveRight {
+  from {
+    right: -700px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    left: -700px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    opacity: 0.2;
+    line-height: 100px;
+  }
+  to {
+    opacity: 1;
+    line-height: 25px;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   main {
     background-color: var(--pale-cyan);
@@ -71,6 +100,8 @@
     font-weight: var(--head-weight);
     color: var(--dark-cyan);
     padding-bottom: 20px;
+    position: relative;
+    animation: moveLeft 1.5s ease-in;
   }
 
   .left p {
@@ -78,6 +109,9 @@
     color: var(--dark-cyan);
     font-weight: var(--body-weight);
     padding-bottom: 20px;
+    position: relative;
+    animation: moveLeft 1.5s ease-in;
+    animation-delay: 0.3s;
   }
 
   .left button {
@@ -89,6 +123,9 @@
     border-radius: 20px;
     font-family: var(--body-font);
     font-weight: var(--body-weight2);
+    position: relative;
+    animation: moveLeft 1.5s ease-in;
+    animation-delay: 0.4s;
   }
 
   .left button:hover {
@@ -109,6 +146,11 @@
     margin: 0 auto;
   }
 
+  #img {
+    position: relative;
+    animation: moveRight 1.5s ease-in;
+  }
+
   section {
     padding: 100px 0px 100px 0px;
   }
@@ -122,6 +164,8 @@
     padding: 2em;
     margin-bottom: 20px;
     border-radius: 10px;
+    position: relative;
+    animation: moveUp 1.5s ease-in;
   }
 
   .text {
@@ -160,6 +204,9 @@
     position: relative;
     z-index: 2;
     text-align: center;
+    position: relative;
+    animation: moveLeft 1.5s ease-in;
+    animation-delay: 0.4s;
   }
 
   aside h2 {
